@@ -34,10 +34,7 @@ The framework features eight distinct configurations to evaluate reduction mecha
 
 ## Setup and Installation
 
-1. Clone this repository to your local machine:
-   ```bash
-   git clone [https://github.com/aiman-akmal/CNN-GNN-PCAM.git](https://github.com/aiman-akmal/CNN-GNN-PCAM.git)
-   ```
+1. Clone this repository to your local machine. 
 
 2. Install the required dependencies:
    ```bash
