@@ -1,0 +1,11 @@
+streamlit
+
+torch
+torchvision
+torch_geometric==2.8.0
+
+numpy
+scipy
+scikit-learn
+h5py
+joblib
