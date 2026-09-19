@@ -31,6 +31,9 @@ The framework features eight distinct configurations to evaluate reduction mecha
 * `models/`: Directory dedicated to storing trained PyTorch `.pth` weights.
 * `outputs/`: Directory where generated visualization artifacts are saved.
 
+## Data Download 
+Clone or download the official P-CAM dataset from its original repository: `https://github.com/basveeling/pcam.git`
+
 
 ## Setup and Installation
 
