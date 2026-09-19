@@ -32,7 +32,7 @@ The framework features eight distinct configurations to evaluate reduction mecha
 * `outputs/`: Directory where generated visualization artifacts are saved.
 
 ## Data Download 
-Clone or download the official P-CAM dataset from its original repository: `https://github.com/basveeling/pcam.git`
+Clone or download the official P-CAM dataset from its original repository: [PatchCamelyon (PCam)](https://github.com/basveeling/pcam.git)
 
 
 ## Setup and Installation
