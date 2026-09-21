@@ -1,7 +1,7 @@
 # Phase-Designated Reduction in Hybrid CNN-GNN Models for Computational Pathology
 
 ## Overview
-This repository contains phase-designated fidelity-preserving reduction framework applied to hybrid CNN-GNN architectures in computational pathology. The pipeline combines image-derived representations with relational learning to model local morphology alongside tissue organization. 
+This repository contains a phase-designated fidelity-preserving reduction framework applied to hybrid CNN-GNN architectures in computational pathology. The pipeline combines image-derived representations with relational learning to model local morphology alongside tissue organization. 
 
 ## Model Architecture
 The predictive pipeline is built on a common MobileNetV3-GraphSAGE backbone:
@@ -18,33 +18,31 @@ To manage the computational demands of multi-stage graph pipelines, this project
 ## Dataset
 This project is evaluated using the PatchCamelyon (P-CAM) dataset, which consists of 327,680 RGB hematoxylin and eosin (H&E)-stained image patches extracted from lymph-node whole-slide images. 
 * All image patches have dimensions of 96x96 pixels.
-* A patch labelled as benign (class 0) or malignant (class 1)
+* A patch is labelled as benign (class 0) or malignant (class 1).
 
 ## Evaluation Configurations
 The framework features eight distinct configurations to evaluate reduction mechanisms both individually and in combination. These configurations are assessed across predictive correctness (classification accuracy), PGExplainer-guided perturbation fidelity, and training-time computational burden.
 
 ## Project Structure
-* `data/`: Directory for storing the P-CAM dataset and preprocessed HDF5 files.
-* `app.py`: The Streamlit interface for end-user interaction.
-* `src/`: Core Python modules containing the CNN-GNN model architecture, dataset loaders, and inference logic.
-* `scripts/`: Executable Python scripts for end-to-end pipeline execution
+* `src/`: Core Python library.
+* `notebooks/`: Execution workflows
+  * `01_eda.ipynb`: Exploratory data analysis and patch inspection.
+  * `02_feature_extraction.ipynb`: IPCA fitting and dynamic cell crop extraction.
+  * `03_visualization.ipynb`: Visual mapping of semantic KNN graph topology.
+  * `04_training.ipynb`: PyTorch Geometric training loops.
+  * `05_ablation.ipynb`: Configuration evaluations (M1-M8) and PGExplainer fidelity extraction.
+  * `06_results.ipynb`: Multi-model ROC and Reliability (Calibration) Curve generation.
 * `models/`: Directory dedicated to storing trained PyTorch `.pth` weights.
-* `outputs/`: Directory where generated visualization artifacts are saved.
+* `outputs/` & `results/`: Directories for generated visual artifacts and intermediate JSON evaluation metrics.
 
 ## Data Download 
 Clone or download the official P-CAM dataset from its original repository: [PatchCamelyon (PCam)](https://github.com/basveeling/pcam.git)
 
-
-## Setup and Installation
+## Setup and Usage
 
 1. Clone this repository to your local machine. 
 
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
-   ```
-
-3. Launch the Streamlit application:
-   ```bash
-   streamlit run app.py
    ```
