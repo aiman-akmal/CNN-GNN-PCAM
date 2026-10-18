@@ -81,7 +81,7 @@ def compute_final_fidelity_scores(p_orig, p_delete_array, p_retain_array):
     auc_plus_raw = np.trapz(y=y_plus, x=sparsity_levels)
     auc_minus_raw = np.trapz(y=y_minus, x=sparsity_levels)
     
-    fid_plus = (2 * auc_plus_raw) - 1
-    fid_minus = (2 * auc_minus_raw) - 1
+    fid_plus = (2 * auc_plus_raw / 0.90) - 1
+    fid_minus = (2 * auc_minus_raw / 0.90) - 1
     
     return fid_plus, fid_minus
