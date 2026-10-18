@@ -6,3 +6,6 @@ venv/
 data/
 models/*.pth
 *.pt.venv/
+
+.venv/
+/.venv/
